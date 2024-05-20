@@ -15,6 +15,24 @@ const LoginScreen = () => {
 
   const navigation = useNavigation();
 
+    const handleLogin = async () => {
+        const user = await AsyncStorage.getItem("user")
+        if(!user){
+            alert("Nenhum usúario cadastro")
+            return
+        }
+        const userJson = JSON.parse(user)
+        if(userJson.email === email && userJson.password === password){
+            navigation.navigate("Home")
+        }else{
+            alert("Email ou senha inválidos")
+        }
+    } 
+
+    const handleCadastro = () => {
+        navigation.navigate("Cadastro")
+    }
+
   return (
     <View style={styles.container}>
       <TextInput
