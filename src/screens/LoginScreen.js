@@ -59,12 +59,34 @@ const LoginScreen = () => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#fff",
-  },
-});
-
-export default LoginScreen;
+    container: {
+      flex: 1,
+      alignItems: "center",
+      justifyContent: "center",
+      backgroundColor: "#221F1F",
+    },
+    input: {
+      borderWidth: 1,
+      borderColor: "#ccc",
+      borderRadius: 5,
+      padding: 10,
+      marginVertical: 10,
+      width: "80%",
+      backgroundColor: "#fff",
+    },
+    button: {
+      backgroundColor: "#e50914",
+      borderRadius: 5,
+      padding: 10,
+      width: "80%",
+      alignItems: "center",
+      marginBottom: 10,
+    },
+    buttonText: {
+      color: "#fff",
+      fontWeight: "bold",
+      fontSize: 18,
+    },
+  });
+  
+  export default LoginScreen;
