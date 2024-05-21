@@ -2,7 +2,7 @@ import { Text, View, StyleSheet, Image } from "react-native";
 import React from "react";
 
 export default function MovieCard({ filme }) {
-  const dataOriginal = new Date(filme.release_data);
+  const dataOriginal = new Date(filme.release_date);
   const dataFormatada = new Intl.DateTimeFormat("pt-BR").format(dataOriginal);
 
   return (
@@ -12,9 +12,9 @@ export default function MovieCard({ filme }) {
         source={{ uri: `https://image.tmdb.org/t/p/w500${filme.poster_path}` }}
       />
       <Text style={styles.title}>{filme.title}</Text>
-      <Text style={styles.vote_avarage}> Nota: {filme.vote_avarage}</Text>
-      <Text style={styles.release_date}> Lançamento: {dataFormatada}</Text>
-      <Text numberOflines={1} style={styles.overview}>
+      <Text style={styles.vote_average}>Nota: {filme.vote_average}</Text>
+      <Text style={styles.release_date}>Lançamento: {dataFormatada}</Text>
+      <Text numberOfLines={1} style={styles.overview}>
         Sinopse: {filme.overview}
       </Text>
     </View>
