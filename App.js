@@ -4,6 +4,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import LoginScreen from "./src/screens/LoginScreen";
 import CadastroScreen from "./src/screens/CadastroScreen";
 import HomeScreen from "./src/screens/HomeScreen";
+import DetalhesFilmeScreen from "./src/screens/DetalhesFilmeScreen";
 import { StatusBar } from "react-native";
 
 const Stack = createStackNavigator();
@@ -41,6 +42,17 @@ export default function App() {
           options={{
             title: "FILMES POPULARES",
             headerLeft: null,
+            headerTitleAlign: "center",
+            headerStyle: { backgroundColor: "#B81D24" },
+            headerTintColor: "#fff",
+            headerTitleStyle: { fontWeight: "bold" },
+          }}
+        />
+        <Stack.Screen
+          name="DetalhesFilme"
+          component={DetalhesFilmeScreen}
+          options={{
+            title: "DETALHES DO FILME",
             headerTitleAlign: "center",
             headerStyle: { backgroundColor: "#B81D24" },
             headerTintColor: "#fff",
